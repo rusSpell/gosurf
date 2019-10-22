@@ -7,6 +7,12 @@
 .header{
     position: relative;
     height: 100vh;
+    &__map{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 3;
+    }
     &__slider{
         &-item{
             height: 100vh;
@@ -34,9 +40,68 @@
         top: 0;
         left: 0;
         z-index: 3;
-
+        border-right: 1px solid rgba(255,255,255, .25);
+        height: 100vh;
+        text-align: center;
+    }
+    &__date{
+        padding-top: 20px;
+        font-weight: 800;
+        font-size: 72px;
+        line-height: 64px;
+        margin-bottom: 20px;
+        span{
+            padding-top: 15px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 1.4px;
+            display: block;
+        }
+    }
+    &__location{
+        display: inline-block;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px; 
+        letter-spacing: 1.05px;
+        padding-left: 20px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../images/marker.svg);
+            left: 0;
+            top: 0;
+            width: 11px;
+            height: 13px;
+        }
+    }
+    &__arrow{
+        position: absolute;
+        left: 210px;
+        bottom: 40px;
+        z-index: 3;
     }
 }
+.menu{
+    padding-top: 40px;
+    a{
+        span{
+            display: block;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 3px;
+            padding-top: 6px;
+            margin-bottom: 20px;
+        }
+    }
+}        
+
+
+
 .slider-item{
     &__info{
         position: absolute;
@@ -69,7 +134,7 @@
     top: 40px;
     right: 80px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 4;
     &__left{
         right: 125px;        
     }

@@ -4,9 +4,17 @@ body{
     font-family: 'Fira Sans', sans-serif;
     color: #fff;
 }
+ul{
+    list-style: none;
+    margin: 0;padding: 0;
+}
+li{
+    margin: 0;padding: 0;
+}
 a{
     display: inline-block;
     text-decoration: none;
+    color: #fff;
 }
 .suptitle-left{
     font-size: 22px;
