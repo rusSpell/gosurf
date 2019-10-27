@@ -142,7 +142,7 @@
     }
 }
 
-.slider-dots{
+.slider-dotshead{
     position: absolute;
     right: 50px;
     bottom: 36px;
@@ -192,7 +192,7 @@
     background-position: right 200px;
     background-repeat: no-repeat;
     background-size: auto;
-    padding: 160px 0px 210px;
+    padding: 160px 0px 120px;
     &__subtitle{
         text-align: right;
         padding-right: 80px;
@@ -207,6 +207,13 @@
            min-height: 750px; 
            background: rgba(#1C2121, .85);
            position: relative;
+           transition: all .3s;
+           &:hover{
+                background: rgba(#1C2121, .3);
+                .surf-box__inner-btn{
+                    display: block;
+                }
+           }
            &-title{
                font-size: 40px;
                line-height: 36px;
@@ -230,9 +237,10 @@
                }
            }
            &-btn{
+               display: none;
                 position: absolute;
                 text-align: center;
-                bottom: 27px;
+                bottom: 0px;
                 left: 0;
                 right: 0;
            }
@@ -244,6 +252,43 @@
             top: 50px;
             opacity: .25;
         }
+        .slick-slide:nth-child(4n+1){
+            .surf-box{
+                margin-top: 32px;
+            }
+        }
+        .slick-slide:nth-child(4n+3){
+            .surf-box{
+                margin-top: 89px;
+            }
+        }
+        .slick-current{
+            .surf-box__inner-btn{
+                display: block;
+            }
+            .surf-box__inner{
+                background: rgba(#1C2121, .3);
+            }
+        }
+    }
+}
+
+
+.slider-map{
+    max-width: 1200px;
+    min-height: 635px;
+    background-image: url(../images/world-map-dots.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+.slider-dots{}
+    &__circle{
+
+    }
+    .content{
+        display: none;
     }
 }
 
