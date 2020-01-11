@@ -88,6 +88,11 @@
 }
 .menu{
     padding-top: 40px;
+    &__list{
+        a{
+            cursor: pointer;
+        }
+    }
     a{
         span{
             display: block;
@@ -100,9 +105,31 @@
             text-transform: capitalize;
         }
     }
-}        
-
-
+} 
+ 
+.menu-btn{
+    display: none;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    right: 20px;
+    top: 75px;
+    z-index: 20;
+    &__inner{
+        width: 40px;
+    }
+    &__line{        
+        height: 5px;
+        background-color: $green;
+        + .menu-btn__line{
+            margin-top: 5px;
+        }
+    }
+}
 
 .slider-item{
     &__info{
@@ -580,9 +607,7 @@
         &-box{
             text-align: center;
             margin-right: 57px;
-            img{
-
-            }
+            
         }
         &-name{
             font-size: 18px;
